@@ -18,7 +18,7 @@ class CompanyDetection:
     def __init__(self, use_pos):
         self.use_pos = use_pos
         if use_pos:
-            self.tagger = POSTagger(model='resources/postagger.model')
+            self.tagger = POSTagger(model='personal_information_hider/resources/postagger.model')
 
         file = open_file('resources/iranian_companies.txt')
         self.companies = file.read().split('\n')

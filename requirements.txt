@@ -1,0 +1,6 @@
+hazm==0.7.0
+nltk==3.3
+numpy==1.21.6
+parstdex==1.1.5
+pytextspan==0.5.4
+six==1.16.0
