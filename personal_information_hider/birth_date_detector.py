@@ -1,9 +1,9 @@
 from parstdex import Parstdex
 
 
-class BirthdayDateDetection:
+class BirthDateDetection:
     abbvr = '000_000'
-    hiding_text = "<#birthday_date#>"
+    hiding_text = "<#birth_date#>"
 
     def __init__(self):
         self.model = Parstdex()

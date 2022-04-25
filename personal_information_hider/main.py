@@ -1,6 +1,6 @@
 from hazm import Normalizer
 
-from personal_information_hider import UrlDetection, EmailDetection, CompanyDetection, BirthdayDateDetection, \
+from personal_information_hider import UrlDetection, EmailDetection, CompanyDetection, BirthDateDetection, \
     NameDetection, NumberDetection, AddressDetection
 
 
@@ -13,7 +13,7 @@ def run(address, use_pos=True, output_file='output.txt'):
     normalizer = Normalizer()
     text = normalizer.normalize(text)
     text = CompanyDetection(use_pos).hide_companies_names(text)
-    text = BirthdayDateDetection().hide_date_names(text)
+    text = BirthDateDetection().hide_date_names(text)
     text = AddressDetection().hide_address(text)
     text = NameDetection().hide_person_name(text)
     text = NumberDetection().hide_personal_numbers(text)
