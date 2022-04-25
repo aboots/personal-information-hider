@@ -4,7 +4,7 @@ from personal_information_hider import UrlDetection, EmailDetection, CompanyDete
     NameDetection, NumberDetection, AddressDetection
 
 
-def run(address, use_pos=True):
+def run(address, use_pos=True, output_file='output.txt'):
     file = open(address, 'r', encoding="utf-8")
     text = file.read()
     file.close()
@@ -17,4 +17,6 @@ def run(address, use_pos=True):
     text = AddressDetection().hide_address(text)
     text = NameDetection().hide_person_name(text)
     text = NumberDetection().hide_personal_numbers(text)
+    with open(output_file, 'w', encoding="utf-8") as file:
+        file.write(text)
     return text
