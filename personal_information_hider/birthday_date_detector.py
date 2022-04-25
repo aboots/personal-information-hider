@@ -2,7 +2,7 @@ from parstdex import Parstdex
 
 
 class BirthdayDateDetection:
-    abbvr = '00000'
+    abbvr = '000_000'
     hiding_text = "<#birthday_date#>"
 
     def __init__(self):

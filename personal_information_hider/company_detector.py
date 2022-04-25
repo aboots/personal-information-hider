@@ -13,9 +13,9 @@ def open_file(filename):
 
 class CompanyDetection:
     hiding_text = "<#company_name#>"
-    abbvr = '0000'
+    abbvr = '000_000'
 
-    def __init__(self, use_pos):
+    def __init__(self, use_pos=True):
         self.use_pos = use_pos
         if use_pos:
             self.tagger = POSTagger(model='personal_information_hider/resources/postagger.model')
