@@ -36,7 +36,7 @@ class BirthDateDetection:
             last_span = span[1]
         return final_text + text[last_span:]
 
-    def hide_date_names(self, text):
+    def hide_birth_dates(self, text):
         spans = self.model.extract_span(text)['datetime']
         birthday_spans = self.extract_birthday_spans(text, spans)
         text = self.convert_text(text, birthday_spans)
