@@ -12,7 +12,7 @@ class NameDetection:
         self.first_names_reg = json.loads(file.read())
         file.close()
 
-        self.pattern = f"\W(((({self.first_names_reg})(\W+))+({self.last_names_reg}))|({self.last_names_reg})|({self.first_names_reg}))\W"
+        self.pattern = f"(^|\W)(((({self.first_names_reg})(\W+))+({self.last_names_reg}))|({self.last_names_reg})|({self.first_names_reg}))($|\W)"
 
     def match_name(self, inp):
         matches = []
@@ -28,4 +28,4 @@ class NameDetection:
         matched_names = self.match_name(text)
         for i in matched_names:
             text = text.replace(i.group(), " <#person_name#> ")
-        return text
+        return text.strip()

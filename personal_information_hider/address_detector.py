@@ -3,7 +3,7 @@ from parsi_io.modules.address_extractions import AddressExtraction
 
 class AddressDetection:
     abbvr = '000_000'
-    hiding_text = "<#address#>"
+    hiding_text = "<#address#> "
 
     def __init__(self):
         self.extractor = AddressExtraction()
