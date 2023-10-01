@@ -1,6 +1,3 @@
-# personal_info_hider
+# personal Information Hider
 
-An application (can be used as a python package) that can take a text file as input and hide personal information from the text and write it back
-in a file. It can remove first and last names, addresses, URLs, email addresses, company names, dates, and many other things. This
-may be used in many places for privacy and security issues. For this project, we do a lot of crawling or use part of speech analyses and
-regular expressions and other things
+This project introduces a Python package that serves as a Personal Information Concealer. It takes a text file as input identifies and removes personal information such as first and last names, addresses, URLs, email addresses, company names, dates, and more. The cleaned text is then written back into a file. This tool is particularly useful for addressing privacy and security concerns in various contexts. The concealment process leverages techniques such as web crawling, part-of-speech (POS) tagging, and regular expressions to ensure thorough and accurate information hiding. The combination of POS tagging and regex-based solutions forms the core of this privacy tool.
